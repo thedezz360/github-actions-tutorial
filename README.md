@@ -6,4 +6,5 @@ En github actions podemos usar condicionales, variables de entorno
 
 # variables
 - Podemos crear nuestras propias variables de entorno
-- Github ya viene con variables de entorno, como la información del usuario 
+- Github ya viene con variables de entorno, en la cuales 
+	podemos consultar el nombre del usuario, la url del repositorio, entre muchas más.

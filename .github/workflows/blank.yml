@@ -32,7 +32,7 @@ jobs:
         run: echo "hola mundo"
 
       - name: "Display environment variables"
-        if: ${{ env.platform == 'azure'}}
+        if: ${{ env.platform == 'aws'}}
         run: |
           echo "This is the value of platform: ${{env.platform}}"
           echo "This is the value of region: ${{env.region}}"
@@ -41,3 +41,6 @@ jobs:
       - name: "show variables for default"
         run: |
           echo "Eventos ${{ toJSON(github.event)}}"
+          echo "Github_ACTOR: $GITHUB_ACTOR"
+          echo "Github_REPOSITORY: $GITHUB_REPOSITORY"
+      

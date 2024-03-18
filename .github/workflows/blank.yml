@@ -42,8 +42,10 @@ jobs:
           echo "This is the value of region: ${{env.region}}"
           echo "This is the value of account: ${{env.account}}"
 
-          echo "This is the value of username: ${{env.username}}"
-          echo "This is the value of password: ${{env.password}}"
+          echo "This is a secret value, This is the value of username: ${{env.username}}"
+          echo "This is a secret value, This is the value of password: ${{env.password}}"
+
+          echo "Project version ${{ vars.PROJECT_VERSION }}"
 
       - name: "Show values if user is correct"
         if: ${{ env.username != '' && env.password != '' }}

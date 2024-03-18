@@ -21,4 +21,7 @@ En github actions podemos usar condicionales, variables de entorno
 	Para utilizar estos secrets podemos asignarlos a una variable pero hay que tener en 
 	cuenta que no los podemos visualizar ya que se mostraran como asteriscos aunque si
 	podemos trabajar con ellos 
-	## Variables, es para valores que no son estrictamente privados
+	## Variables, 
+	es para valores que no son estrictamente privados,
+	los podemos crear igual que los secrets
+	Estas variables vendrán de "vars"

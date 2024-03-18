@@ -22,6 +22,10 @@ jobs:
      platform: aws
      region: us-east-1
      account: 123456789012
+
+     # secret value
+     username: ${{ secrets.USERNAME }}
+     password: ${{ secrets.PASSWORD }}
     
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -38,9 +42,17 @@ jobs:
           echo "This is the value of region: ${{env.region}}"
           echo "This is the value of account: ${{env.account}}"
 
+          echo "This is the value of username: ${{env.username}}"
+          echo "This is the value of password: ${{env.password}}"
+
+      - name: "Show values if user is correct"
+        if: ${{ env.username != '' && env.password != '' }}
+        run: |
+          echo "user and password exist"
+
       - name: "show variables for default"
         run: |
-          echo "Eventos ${{ toJSON(github.event)}}"
+          echo "Events ${{ toJSON(github.event)}}"
           echo "Github_ACTOR: $GITHUB_ACTOR"
           echo "Github_REPOSITORY: $GITHUB_REPOSITORY"
       
